@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container">
-    <?php echo "<h1>Docker LAMP Template</h1>"; ?>
+    <?php echo "<h1>COMILONES</h1>"; ?>
 
     <?php
 
