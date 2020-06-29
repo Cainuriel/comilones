@@ -1,0 +1,50 @@
+version: '3'
+
+services: 
+  php-apache-comilones:
+    container_name: php-apache-comilones
+    build: .
+    restart: always
+    volumes: ['./www:/var/www/html']
+    ports:
+      - '8080:80'
+    links: 
+      - db-comilones
+  
+  
+  db-comilones:
+    container_name: db-comilones
+    image: mysql:8.0
+    restart: always
+    volumes: 
+      - ./db_data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - '33060:3306' 
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: comilones
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+
+
+  phpmyadmin-comilones:
+    depends_on:
+      - db-comilones
+    container_name: phpmyadmin-comilones
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8088:80'
+    links: 
+      - db-comilones
+    environment:
+      PMA_HOST: db-comilones
+      MYSQL_ROOT_PASSWORD: password
+
+
+
+
+
+
