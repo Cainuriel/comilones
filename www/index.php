@@ -45,7 +45,7 @@
                         <li class="nav-item ">
                             <a class="nav-link" href="#">Link</a>
                         </li>
-                      
+
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -55,6 +55,9 @@
             </nav>
 
         </header>
+    </div>
+
+    <main class="container">
 
 
 
@@ -87,8 +90,25 @@
 
             ?>
         </div>
+    </main>
 
+    <div class="container">
+
+
+
+        <!-- Footer -->
+        <footer class="page-footer font-small blue footer">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://github.com/Cainuriel"> Superloper Developer</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
     </div>
+    <!-- Footer -->
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
