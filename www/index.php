@@ -13,14 +13,16 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/index_styles.css">
-    <link rel="stylesheet" href="styles\index_responsive.css">
+    <!-- <link rel="stylesheet" href="styles\index_responsive.css"> -->
 
     <title>Comilones</title>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container mb-3">
+
+
 
         <header class="header_content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,31 +61,22 @@
         </header>
     </div>
 
-    <main class="container">
+    <main class="container my-5">
 
-
-
-        <div class="row">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
             <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { ?>
 
-
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $value['name'] ?></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $value['name'] ?></h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
                     </div>
                 </div>
+
 
             <?php  }
             // Close and free result
@@ -92,25 +85,24 @@
             mysqli_close($conn);  ?>
 
         </div>
-
     </main>
 
     <div class="container">
 
+        <div class="row">
 
+            <!-- Footer page-footer font-small blue footer -->
+            <footer class="col">
 
-        <!-- Footer -->
-        <footer class="page-footer font-small blue footer">
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="https://github.com/Cainuriel"> Superloper Developer</a>
+                </div>
+                <!-- Copyright -->
 
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="https://github.com/Cainuriel"> Superloper Developer</a>
-            </div>
-            <!-- Copyright -->
-
-        </footer>
-        <!-- Footer -->
-
+            </footer>
+            <!-- Footer -->
+        </div>
     </div>
 
 
