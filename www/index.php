@@ -18,75 +18,45 @@
 
 <body>
 
-    <div class="super_container">
+    <div class="container">
 
-        <header class="header d-flex flex-row">
-            <div class="header_content d-flex flex-row align-items-center">
-                <!-- Logo -->
-                <div class="logo_container">
-                    <div class="logo">
-                        <img src="img/comilones_logo.png" alt="">
-                        <span>COMILONES</span>
-                    </div>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="logo">
+                    <img src="img/comilones_logo.png" alt="">
                 </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <!-- Main Navigation -->
-                <nav class="main_nav_container">
-                    <div class="main_nav">
-                        <ul class="main_nav_list">
-                            <li class="main_nav_item"><a href="#">home</a></li>
-                            <li class="main_nav_item"><a href="#">Quienes somos</a></li>
-                            <li class="main_nav_item"><a href="#">Empresas</a></li>
-                            <li class="main_nav_item"><a href="contact.html">contacto</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
 
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
 
-            <!-- Hamburger -->
-            <div class="hamburger_container">
-                <i class="fas fa-bars trans_200"></i>
-            </div>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                      
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
 
         </header>
 
-        <!-- Menu -->
-        <div class="menu_container menu_mm">
 
-            <!-- Menu Close Button -->
-            <div class="menu_close_container">
-                <div class="menu_close"></div>
-            </div>
-
-            <!-- Menu Items -->
-            <div class="menu_inner menu_mm">
-                <div class="menu menu_mm">
-                    <ul class="menu_list menu_mm">
-                        <li class="menu_item menu_mm"><a href="#">Home</a></li>
-                        <li class="menu_item menu_mm"><a href="#">Quienes somos</a></li>
-                        <li class="menu_item menu_mm"><a href="#">Empresas</a></li>
-                        <li class="menu_item menu_mm"><a href="contact.html">contacto</a></li>
-                    </ul>
-
-                    <!-- Menu Social -->
-
-                    <div class="menu_social_container menu_mm">
-                        <ul class="menu_social menu_mm">
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-
-                    <div class="menu_copyright menu_mm">Practicas SOIB 2019/20</div>
-                </div>
-
-            </div>
-
-        </div>
 
         <div class="home">
             <?php echo "<h1>¿Dónde comemos? </h1>"; ?>
