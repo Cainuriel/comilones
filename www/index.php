@@ -1,3 +1,5 @@
+<?php require_once "controllers/index_controller.php"; ?>
+
 <!doctype html>
 <html lang="es">
 
@@ -20,7 +22,7 @@
 
     <div class="container">
 
-        <header>
+        <header class="header_content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="logo">
                     <img src="img/comilones_logo.png" alt="">
@@ -31,19 +33,19 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item main_nav_item active">
                             <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class="nav-item main_nav_item">
+                            <a class="nav-link" href="#">Guia</a>
                         </li>
 
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class="nav-item main_nav_item">
+                            <a class="nav-link" href="#">Formulario</a>
                         </li>
 
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class="nav-item main_nav_item">
+                            <a class="nav-link" href="#">Quienes somos</a>
                         </li>
 
                     </ul>
@@ -61,35 +63,36 @@
 
 
 
-        <div class="home">
-            <?php echo "<h1>¿Dónde comemos? </h1>"; ?>
+        <div class="row">
 
-            <?php
-
-            // Connection to DB
-            $conn = mysqli_connect('db-comilones', 'user', 'password', "comilones");
+            <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { ?>
 
 
-            $query = 'SELECT id, name From restaurantes';
-            $result = mysqli_query($conn, $query);
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $value['name'] ?></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
 
-            echo '<table class="table table-striped">';
-            echo '<thead><tr><th>id</th><th>name</th></tr></thead>';
-            while ($value = $result->fetch_array(MYSQLI_ASSOC)) {
-                echo '<tr>';
-                echo '<td>' . $value['id'] . '</td>';
-                echo '<td>' . $value['name'] . '</td>';
-                echo '</tr>';
-            }
-            echo '</table>';
-
+            <?php  }
             // Close and free result
             $result->close();
 
-            mysqli_close($conn);
+            mysqli_close($conn);  ?>
 
-            ?>
         </div>
+
     </main>
 
     <div class="container">
@@ -106,8 +109,10 @@
             <!-- Copyright -->
 
         </footer>
+        <!-- Footer -->
+
     </div>
-    <!-- Footer -->
+
 
 
     <!-- Optional JavaScript -->
