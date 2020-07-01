@@ -70,45 +70,42 @@
 
         <!-- Formulario filtrado -->
 
-        <section>
-
+        <section class="header_content">
             <form>
-                <p>Puede filtrar los restaurantes a su gusto:</p>
-                <div class="row">
-                    <div class="col">
-                        <label for="nombre">Nombre:</label>
-                     <input type="text" name="nombre" id="nombre">
-                        <br><br>
-                        <label for="localidad">Localidad:</label>
-                     <input type="text" name="localidad" id="localidad">
-                        <br><br>
-                        <label for="precios">Precios:</label>
-                     <input type="number" name="precios" id="precios">
-                        <br><br>
-                        <label for="valoracion">Valoración:</label>
-                     <input type="number" name="valoracion" id="valoracion">
-                        <br><br>
+                <div class="row form-group">
+                    <div class="col-3 form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId2" placeholder="">
+                        <small id="helpId2" class="form-text text-muted">Busqueda por nombre</small>
+                    </div>
 
-                        <label for="tipo_cocina">Tipo de cocina:</label>
-                     <input type="text" name="tipo_cocina" id="tipo_cocina">
-                        <br><br>
-                       
+                    <div class="col-3 form-group">
+                        <label for="localidad">Localidad:</label>
+                        <input type="text" class="form-control" name="localidad" id="localidad" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Solo islas Baleares</small>
                     </div>
-                    <div class="col">
-                    <label for="categoria">Categoria:</label>
-                        <select name="categoria" id="categoria">
-                            <option value="mallorquina">Mallorquina</option>                  
-                        </select>
-                        <br><br>
-                        <input type="submit" value="Filtrar">
+
+                    <label class="my-1 mx-2" for="precios">Precio medio por persona:</label>
+                    <select class=" col-3 form-control" name="precios" id="precios">
+                        <option>menos de 20</option>
+                        <option>hasta 50</option>
+                        <option>mas de 100</option>
+                    </select>
+
+                    <label class="my-1 mx-5" for="tipo_cocina">Tipo de cocina</label>
+                    <select class="col-3 form-control" name="tipo_cocina" id="tipo_cocina">
+                        <option>Mallorquina</option>
+                        <option>Francesa</option>
+                        <option>Italiana</option>
+                    </select>
+
+                    <div class="col-3 form-group">
+                        <button name="submit" type="submit" class="btn btn-primary">Buscar</button>
                     </div>
+
                 </div>
             </form>
-
-
         </section>
-
-
     </div>
 
     <main class="container my-5">
@@ -119,7 +116,7 @@
 
             <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { ?>
 
-                <div class="col mb-4">
+                <div class="col mb-4 header_content">
                     <div class="card h-100">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
