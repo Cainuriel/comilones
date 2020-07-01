@@ -1,7 +1,7 @@
 <?php require_once "controllers/index_controller.php"; ?>
 
 
-<?php 
+
 
 <!doctype html>
 <html lang="es">
@@ -76,16 +76,23 @@
                 <p>Puede filtrar los restaurantes a su gusto:</p>
                 <div class="row">
                     <div class="col">
-                        <label for="filtro">Primer filtro:</label>
-                        <select name="filtro" id="filtro">
-                            <option value="no_filtro">Sin filtro</option>
-                            <option value="nombre">Nombre</option>
-                            <option value="precio">Precio</option>
-                            <option value="localidad">Localidad</option>
-                            <option value="cocina">Tipo de cocina</option>
-                        </select>
+                        <label for="nombre">Nombre:</label>
+                     <input type="text" name="nombre" id="nombre">
                         <br><br>
-                        <input type="submit" value="Seleccionar">
+                        <label for="localidad">Localidad:</label>
+                     <input type="text" name="localidad" id="localidad">
+                        <br><br>
+                        <label for="precios">Precios:</label>
+                     <input type="number" name="precios" id="precios">
+                        <br><br>
+                        <label for="valoracion">Valoración:</label>
+                     <input type="number" name="valoracion" id="valoracion">
+                        <br><br>
+
+                        <label for="tipo_cocina">Tipo de cocina:</label>
+                     <input type="text" name="tipo_cocina" id="tipo_cocina">
+                        <br><br>
+                       
                     </div>
                     <div class="col">
                     <label for="categoria">Categoria:</label>
