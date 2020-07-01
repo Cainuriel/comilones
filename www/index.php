@@ -1,5 +1,8 @@
 <?php require_once "controllers/index_controller.php"; ?>
 
+
+<?php 
+
 <!doctype html>
 <html lang="es">
 
@@ -22,7 +25,7 @@
 
     <div class="container mb-3">
 
-
+        <!-- Menu navegacion -->
 
         <header class="header_content">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,9 +62,51 @@
             </nav>
 
         </header>
+
+        <!-- fin  Menu navegacion -->
+    </div>
+
+    <div class="container my-5">
+
+        <!-- Formulario filtrado -->
+
+        <section>
+
+            <form>
+                <p>Puede filtrar los restaurantes a su gusto:</p>
+                <div class="row">
+                    <div class="col">
+                        <label for="filtro">Primer filtro:</label>
+                        <select name="filtro" id="filtro">
+                            <option value="no_filtro">Sin filtro</option>
+                            <option value="nombre">Nombre</option>
+                            <option value="precio">Precio</option>
+                            <option value="localidad">Localidad</option>
+                            <option value="cocina">Tipo de cocina</option>
+                        </select>
+                        <br><br>
+                        <input type="submit" value="Seleccionar">
+                    </div>
+                    <div class="col">
+                    <label for="categoria">Categoria:</label>
+                        <select name="categoria" id="categoria">
+                            <option value="mallorquina">Mallorquina</option>                  
+                        </select>
+                        <br><br>
+                        <input type="submit" value="Filtrar">
+                    </div>
+                </div>
+            </form>
+
+
+        </section>
+
+
     </div>
 
     <main class="container my-5">
+
+        <!-- Tarjetas restaurantes -->
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
@@ -85,6 +130,8 @@
             mysqli_close($conn);  ?>
 
         </div>
+
+        <!--  fin Tarjetas restaurantes -->
     </main>
 
     <div class="container">
