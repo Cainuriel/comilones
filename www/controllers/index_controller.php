@@ -20,9 +20,19 @@ if (!$conn) {
         global $conn;
 
         $select ="SELECT * FROM restaurantes";
+
+        // search by name
         if (isset($_GET['name']) && !empty($_GET['name'])) {
 
             $select = $select. " WHERE name like '%".$_GET['name']."%'";
+
+        // search by localidad
+        } elseif (isset($_GET['localidad']) && !empty($_GET['localidad'])) { 
+
+            echo "Entro en localidadddd ..";
+
+            $select = $select. " WHERE localidad like '%".$_GET['localidad']."%'";
+
         }
 
          return  mysqli_query($conn, $select);
@@ -33,6 +43,8 @@ if (!$conn) {
 if(isset($_GET['submit']))  {
 
     $result = filtrado_restaurantes($conn);
+
+ 
 
 
 

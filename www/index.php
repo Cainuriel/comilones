@@ -106,6 +106,8 @@
                         <option>Italiana</option>
                     </select>
 
+                    
+
                     <div class="col-3 form-group">
                         <button name="submit" type="submit" class="btn btn-primary">Buscar</button>
                     </div>
@@ -128,7 +130,7 @@
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><?= $value['name'] ?></h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Localidad: <?= $value['localidad'] ?>.</p>
                         </div>
                     </div>
                 </div>
