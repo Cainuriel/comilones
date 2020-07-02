@@ -92,6 +92,13 @@
                         <option>mas de 100</option>
                     </select>
 
+                    <label class="my-1 mx-5" for="valoracion">Valoración: </label>
+                    <select class="col-3 form-control" name="valoracion" id="valoracion">
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+
                     <label class="my-1 mx-5" for="tipo_cocina">Tipo de cocina</label>
                     <select class="col-3 form-control" name="tipo_cocina" id="tipo_cocina">
                         <option>Mallorquina</option>
