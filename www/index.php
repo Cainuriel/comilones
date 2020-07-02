@@ -113,7 +113,7 @@ $ok = true; // bandera de impresion de cards
                         <option>Mallorquina</option>
                         <option>Francesa</option>
                         <option>Italiana</option>
-                        <option>Francesa</option>
+                        <option>Argentina</option>
                         <option>Casera</option>
                     </select>
 
@@ -140,6 +140,14 @@ $ok = true; // bandera de impresion de cards
                 if(isset($_GET['valoracion']) && ($_GET['valoracion'] != "Indiferente")) {
 
                     if ((intval($value['valoracion'])) == (intval($_GET['valoracion']))) {
+                       $ok=true;
+                   } else { $ok=false;}
+                }
+
+                  // is_cocina activated?
+                  if(isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Indiferente")) {
+
+                    if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
                        $ok=true;
                    } else { $ok=false;}
                 }
