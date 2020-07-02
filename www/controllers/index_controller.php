@@ -8,26 +8,33 @@ $db = "comilones";
 // Connection to DB
 $conn = mysqli_connect($host, $restaurante , $password, $db );
 
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
 
     // funcion para el formulario de filtrado
-    function filtrado_restaurantes($campo, $conn) { 
+    function filtrado_restaurantes($conn) { 
 
+        global $conn;
 
-        $query = 'SELECT * From restaurantes';
-        $result = mysqli_query($conn, $query);
-        
-        while($restaurante = $result->fetch_object()) {
+        $select ="SELECT * FROM restaurantes";
+        if (isset($_GET['name']) && !empty($_GET['name'])) {
 
-            echo  $restaurante->nombre." - ". $restaurante->localidad." - ".$restaurante->tipo_cocina." - <br>";
-
+            $select = $select. " WHERE name like '%".$_GET['name']."%'";
         }
 
+         return  mysqli_query($conn, $select);
+     
 
     }
 
 if(isset($_GET['submit']))  {
 
-echo "Mira el GET QUE ESTA EL SUBMITTTTT...";
+    $result = filtrado_restaurantes($conn);
+
+
 
 } else {   
 
