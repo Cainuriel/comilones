@@ -87,26 +87,34 @@
 
                     <label class="my-1 mx-2" for="precios">Precio medio por persona:</label>
                     <select class=" col-3 form-control" name="precios" id="precios">
-                        <option>menos de 20</option>
-                        <option>hasta 50</option>
-                        <option>mas de 100</option>
+                        <option>Indiferente</option>
+                        <option>hasta 20 euros</option>
+                        <option>entre 50 y 100 euros</option>
+                        <option>más de 100 euros</option>
                     </select>
+
 
                     <label class="my-1 mx-5" for="valoracion">Valoración: </label>
                     <select class="col-3 form-control" name="valoracion" id="valoracion">
+                        <option>Indiferente</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
+                        <option>5</option>
                     </select>
 
                     <label class="my-1 mx-5" for="tipo_cocina">Tipo de cocina</label>
                     <select class="col-3 form-control" name="tipo_cocina" id="tipo_cocina">
+                        <option>Indiferente</option>
                         <option>Mallorquina</option>
                         <option>Francesa</option>
                         <option>Italiana</option>
+                        <option>Francesa</option>
+                        <option>Casera</option>
                     </select>
 
-                    
+
 
                     <div class="col-3 form-group">
                         <button name="submit" type="submit" class="btn btn-primary">Buscar</button>
@@ -131,6 +139,9 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $value['name'] ?></h5>
                             <p class="card-text">Localidad: <?= $value['localidad'] ?>.</p>
+                            <p class="card-text">Coste por persona: <?= $value['precios'] ?>.</p>
+                            <p class="card-text">Tipo de cocina: <?= $value['tipo_cocina'] ?>.</p>
+                            <p class="card-text">Valoración: <?= $value['valoracion'] ?>.</p>
                         </div>
                     </div>
                 </div>
