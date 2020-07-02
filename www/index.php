@@ -91,9 +91,9 @@ $ok = true; // bandera de impresion de cards
                     <label class="my-1 mx-2" for="precios">Precio medio por persona:</label>
                     <select class=" col-3 form-control" name="precios" id="precios">
                         <option>Indiferente</option>
-                        <option>hasta 20 euros</option>
-                        <option>entre 50 y 100 euros</option>
-                        <option>más de 100 euros</option>
+                        <option>Hasta 20 euros</option>
+                        <option>Entre 50 y 100 euros</option>
+                        <option>Más de 100 euros</option>
                     </select>
 
 
@@ -134,14 +134,50 @@ $ok = true; // bandera de impresion de cards
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
+        <?php echo "prueba de conexion ".var_dump($result); ?>
+
             <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { 
+
+                   // isprecio activated?
+                   if(isset($_GET['precios']) && ($_GET['precios'] != "Indiferente")) {
+
+                            if ($_GET['precios'] == "Hasta 20 euros") {
+
+                                
+
+                                if (intval( $value['precios']) > 20) {
+                                    echo $value['precios']." ";
+                                    $value['tipo_cocina'] = 'anulado';
+                                    $value['valoracion'] = 'anulado';
+                                    $ok=false;} 
+
+                                            
+                            } elseif ($_GET['precios'] == "Entre 50 y 100 euros") {
+
+                                    if (intval( $value['precios']) >= 50 && intval( $value['precios']) < 100 ) {
+                                        echo $value['precios']." ";
+                                        $value['tipo_cocina'] = 'anulado';
+                                        $value['valoracion'] = 'anulado';
+                                        $ok=false;     }   
+                                    
+                                    
+
+                                }
+                    } 
+                            
+                
                 
                 // isvaloracion activated?
                 if(isset($_GET['valoracion']) && ($_GET['valoracion'] != "Indiferente")) {
 
                     if ((intval($value['valoracion'])) == (intval($_GET['valoracion']))) {
                        $ok=true;
-                   } else { $ok=false;}
+                   } else { 
+                       
+
+                    $value['tipo_cocina'] = 'anulado';
+                    
+                    $ok=false;}
                 }
 
                   // is_cocina activated?
