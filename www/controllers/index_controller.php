@@ -9,13 +9,7 @@ $db = "comilones";
 $conn = mysqli_connect($host, $restaurante , $password, $db );
 
 
-$query = 'SELECT * From restaurantes';
-$result = mysqli_query($conn, $query);
-
-
-
-
-    
+    // funcion para el formulario de filtrado
     function filtrado_restaurantes($campo, $conn) { 
 
 
@@ -28,6 +22,25 @@ $result = mysqli_query($conn, $query);
 
         }
 
+
     }
+
+if(isset($_GET['submit']))  {
+
+echo "Mira el GET QUE ESTA EL SUBMITTTTT...";
+
+} else {   
+
+    
+$query = 'SELECT * From restaurantes';
+$result = mysqli_query($conn, $query);
+
+
+
+}
+
+    
+ 
+  
 
 ?>
