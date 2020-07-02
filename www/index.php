@@ -1,4 +1,7 @@
-<?php require_once "controllers/index_controller.php"; ?>
+<?php require_once "controllers/index_controller.php"; 
+
+$ok = true; // bandera de impresion de cards
+?>
 
 
 
@@ -131,8 +134,19 @@
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-            <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { ?>
+            <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { 
+                
+                // isvaloracion activated?
+                if(isset($_GET['valoracion']) && ($_GET['valoracion'] != "Indiferente")) {
 
+                    if ((intval($value['valoracion'])) == (intval($_GET['valoracion']))) {
+                       $ok=true;
+                   } else { $ok=false;}
+                }
+
+                if($ok) {
+                ?>
+                
                 <div class="col mb-4 header_content">
                     <div class="card h-100">
                         <img src="..." class="card-img-top" alt="...">
@@ -147,7 +161,7 @@
                 </div>
 
 
-            <?php  }
+            <?php  } }
             // Close and free result
             $result->close();
 
