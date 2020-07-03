@@ -1,4 +1,4 @@
-<?php require_once "controllers/index_controller.php"; 
+<?php require_once "controllers/index_controller.php";
 
 $ok = true; // bandera de impresion de cards
 ?>
@@ -92,8 +92,8 @@ $ok = true; // bandera de impresion de cards
                     <select class=" col-3 form-control" name="precios" id="precios">
                         <option>Indiferente</option>
                         <option>Hasta 20 euros</option>
-                        <option>Entre 50 y 100 euros</option>
-                        <option>Más de 100 euros</option>
+                        <option>Entre 20 y 50 euros</option>
+                        <option>Más de 50 euros</option>
                     </select>
 
 
@@ -133,65 +133,76 @@ $ok = true; // bandera de impresion de cards
         <!-- Tarjetas restaurantes -->
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+   
+            <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) {
 
-            <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { 
+                // isprecio activated?
+                if (isset($_GET['precios']) && ($_GET['precios'] != "Indiferente")) {
 
-                   // isprecio activated?
-                   if(isset($_GET['precios']) && ($_GET['precios'] != "Indiferente")) {
+                    if ($_GET['precios'] == "Más de 50 euros") {
 
-                            if ($_GET['precios'] == "Hasta 20 euros") {
+                        if (intval($value['precios']) > 50) {
+                            $ok = true;
+                        } else {
+                            echo $value['precios'] . " ";
+                            $value['tipo_cocina'] = 'anulado';
+                            $value['valoracion'] = 'anulado';
+                            $ok = false;
+                        }
+                    } elseif ($_GET['precios'] == "Hasta 20 euros") {
 
-                                
+                        if (intval($value['precios']) <= 20) {
+                            $ok = true;
+                        } else {
+                            echo $value['precios'] . " ";
+                            $value['tipo_cocina'] = 'anulado';
+                            $value['valoracion'] = 'anulado';
+                            $ok = false;
+                        }
+                    } elseif ($_GET['precios'] == "Entre 20 y 50 euros") {
 
-                                if (intval( $value['precios']) > 20) {
-                                    echo $value['precios']." ";
-                                    $value['tipo_cocina'] = 'anulado';
-                                    $value['valoracion'] = 'anulado';
-                                    $ok=false;} 
+                        if (intval($value['precios']) > 20 && intval($value['precios']) <= 50) {
+                            $ok = true;
+                        } else {
+                            echo $value['precios'] . " ";
+                            $value['tipo_cocina'] = 'anulado';
+                            $value['valoracion'] = 'anulado';
+                            $ok = false;
+                        }
+                    }
+                }
 
-                                            
-                            } elseif ($_GET['precios'] == "Entre 50 y 100 euros") {
-
-                                    if (intval( $value['precios']) >= 50 && intval( $value['precios']) < 100 ) {
-                                        echo $value['precios']." ";
-                                        $value['tipo_cocina'] = 'anulado';
-                                        $value['valoracion'] = 'anulado';
-                                        $ok=false;     }   
-                                    
-                                    
-
-                                }
-                    } 
-                            
-                
-                
                 // isvaloracion activated?
-                if(isset($_GET['valoracion']) && ($_GET['valoracion'] != "Indiferente")) {
+                if (isset($_GET['valoracion']) && ($_GET['valoracion'] != "Indiferente")) {
 
                     if ((intval($value['valoracion'])) == (intval($_GET['valoracion']))) {
-                       $ok=true;
-                   } else { 
-                       
+                        $ok = true;
+                    } else {
 
-                    $value['tipo_cocina'] = 'anulado';
-                    
-                    $ok=false;}
+
+                        $value['tipo_cocina'] = 'anulado';
+
+                        $ok = false;
+                    }
                 }
 
-                  // is_cocina activated?
-                  if(isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Indiferente")) {
+                // is_cocina activated?
+                if (isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Indiferente")) {
 
                     if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
-                       $ok=true;
-                   } else { $ok=false;}
+                        $ok = true;
+                    } else {
+                        $ok = false;
+                    }
                 }
+            
 
-                if($ok) {
-                ?>
-                
+            if ($ok) {
+            ?>
+
                 <div class="col mb-4 header_content">
                     <div class="card h-100">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="<?= $value['foto']?>" class="card-img-top" alt="Foto de <?= $value['name'] ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?= $value['name'] ?></h5>
                             <p class="card-text">Localidad: <?= $value['localidad'] ?>.</p>
@@ -203,7 +214,7 @@ $ok = true; // bandera de impresion de cards
                 </div>
 
 
-            <?php  } }
+            <?php  } } // fin del bucle.
             // Close and free result
             $result->close();
 

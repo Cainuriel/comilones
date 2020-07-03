@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db-comilones
--- Tiempo de generación: 01-07-2020 a las 08:47:45
+-- Tiempo de generación: 03-07-2020 a las 17:44:10
 -- Versión del servidor: 8.0.20
 -- Versión de PHP: 7.4.6
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `restaurantes` (
   `id` int NOT NULL,
-  `name` varchar(20) NOT NULL,
+  `name` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `localidad` varchar(120) DEFAULT NULL,
   `precios` int DEFAULT NULL,
   `valoracion` int DEFAULT NULL,
@@ -43,12 +43,12 @@ CREATE TABLE `restaurantes` (
 --
 
 INSERT INTO `restaurantes` (`id`, `name`, `localidad`, `precios`, `valoracion`, `telefono`, `foto`, `tipo_cocina`) VALUES
-(1, 'Casa Cholo', 'Palma de Mallorca', 50, 4, 666666666, NULL, 'Argentina'),
-(2, 'Restaurante el embol', 'Marratxi', 40, 5, 666666666, NULL, 'Mallorquina'),
-(3, 'Pizzeria trattoria', 'Palma de Mallorca', 75, 3, 666666666, NULL, 'Italiana'),
-(4, 'Restaurante Fremi', 'Palma de Mallorca', 15, 2, 666666666, NULL, 'Casera'),
-(6, 'Pizzeria Petato', 'Palma de Mallorca', 25, 2, 666666666, NULL, 'Italiana'),
-(7, 'Restaurante BonJour', 'Portals Nous', 180, 4, 666666666, NULL, 'Francesa');
+(1, 'Can torrat', 'Palma de Mallorca', 35, 2, 666666666, 'img/can_torrat.png', 'Mallorquina'),
+(2, 'Celler de Sa Premsa', 'Palma de Mallorca', 13, 5, 666666666, 'img/celler_sa_prensa.jpg', 'Mallorquina'),
+(3, 'Diablito Porto Pi', 'Palma de Mallorca', 20, 2, 666666666, 'img/diablito_porto_pi.jpg', 'Italiana'),
+(4, 'Es 4 vents', 'Algaida', 35, 3, 666666666, 'img/es-4-vents.jpg', 'Mallorquina'),
+(6, 'Perla Brillante', 'Manacor', 55, 4, 666666666, 'img/perla_brillante.jpg', 'China'),
+(7, 'Pura Louzao', 'Palma de Mallorca', 40, 4, 666666666, 'img/puralouzao.png', 'Alta cocina');
 
 --
 -- Índices para tablas volcadas
