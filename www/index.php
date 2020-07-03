@@ -134,8 +134,6 @@ $ok = true; // bandera de impresion de cards
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
 
-        <?php echo "prueba de conexion ".var_dump($result); ?>
-
             <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) { 
 
                    // isprecio activated?

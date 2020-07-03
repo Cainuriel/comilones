@@ -29,7 +29,6 @@ if (!$conn) {
         // search by localidad
         } elseif (isset($_GET['localidad']) && !empty($_GET['localidad'])) { 
 
-            echo "Entro en localidadddd ..";
 
             $select = $select. " WHERE localidad like '%".$_GET['localidad']."%'";
 
