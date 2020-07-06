@@ -33,6 +33,10 @@ $ok = true; // bandera de impresion de cards
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand absolute" href="index.html">Comilones</a>
+            <!-- logo -->
+            <div >
+                <img src="img/comilones_logo.png" alt="logo comilones" style="height: 50px; margin-bottom: 1em;">
+              </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +48,9 @@ $ok = true; // bandera de impresion de cards
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comilones</a>
+            
               <div class="dropdown-menu" aria-labelledby="dropdown04">
+
                 <a class="dropdown-item" href="courses.html">HTML</a>
                 <a class="dropdown-item" href="courses.html">WordPress</a>
                 <a class="dropdown-item" href="courses.html">Laravel</a>
@@ -213,14 +219,14 @@ $ok = true; // bandera de impresion de cards
 
           if ($ok) {
         ?>
-
+                                    <!-- tarjet Restaurant -->
             <div class="item">
-              <div class="block-19">
+              <div class="block-19 ">
                 <figure>
                   <img class="img-fluid" src="<?= $value['foto'] ?>" alt="Foto de <?= $value['name'] ?>">
                 </figure>
                 <div class="text">
-                  <h2 class="heading"><a href="res-single.php?id=<?=$value['id']?>"><?= $value['name'] ?></a></h2>
+                  <h2 class="heading"><a href="res-single.php?id=<?= $value['id'] ?>"><?= $value['name'] ?></a></h2>
                   <p class="mb-4">Localidad: <?= $value['localidad'] ?>.</p>
                   <p>Tipo de cocina: <?= $value['tipo_cocina'] ?>.</p>
                   <div class="meta d-flex align-items-center">

@@ -126,12 +126,12 @@ header .navbar .dropdown-menu:before {
 }
 
 header .navbar .dropdown-menu .dropdown-item:hover {
-  background: #11cbd7;
+  background: #d79211;
   color: #fff;
 }
 
 header .navbar .dropdown-menu .dropdown-item.active {
-  background: #11cbd7;
+  background: #d79211;
   color: #fff;
 }
 
@@ -151,6 +151,11 @@ header .navbar.navbar-light .nav-link.active {
 .bcrumb a:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+.logo_comilones {
+  height: 50px; 
+  margin-bottom: 5em;
 }
 
 .site-hero {
@@ -193,7 +198,7 @@ header .navbar.navbar-light .nav-link.active {
 .site-hero .btn {
   -webkit-box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.2) !important;
   box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.2) !important;
-  background: #11cbd7 !important;
+  background: #d79211 !important;
   border: 2px solid transparent !important;
   color: #fff;
 }
@@ -247,7 +252,7 @@ header .navbar.navbar-light .nav-link.active {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: #11cbd7;
+  background: #d79211;
   border-radius: 50%;
 }
 
@@ -282,11 +287,11 @@ header .navbar.navbar-light .nav-link.active {
   font-size: 14px;
   letter-spacing: .2em;
   color: #cccccc;
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .episodes .episode-number {
-  border: 2px solid #0d9ea8;
+  border: 2px solid #d79211;
   text-align: center;
   display: inline-block;
   width: 80px;
@@ -294,7 +299,7 @@ header .navbar.navbar-light .nav-link.active {
   text-transform: uppercase;
   line-height: 74px;
   border-radius: 50%;
-  background: #11cbd7;
+  background: #d79211;
   color: #fff;
   font-size: 30px;
 }
@@ -478,7 +483,7 @@ header .navbar.navbar-light .nav-link.active {
 .school-instructors.text-dark .feature .icon > span:before {
   font-size: 50px;
   margin-left: 0;
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .img-bg {
@@ -575,12 +580,12 @@ textarea.form-control {
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
   color: #000 !important;
   background: none !important;
-  border: 2px solid #11cbd7 !important;
+  border: 2px solid #d79211 !important;
 }
 
 .btn.btn-primary-white {
   border: 2px solid transparent;
-  background: #11cbd7;
+  background: #d79211;
 }
 
 .btn.btn-primary-white:hover, .btn.btn-primary-white:focus, .btn.btn-primary-white:active {
@@ -597,7 +602,7 @@ textarea.form-control {
 
 .btn.btn-white:hover, .btn.btn-white:focus, .btn.btn-white:active {
   border: 2px solid transparent;
-  background: #11cbd7 !important;
+  background: #d79211 !important;
 }
 
 .flaticon-custom {
@@ -650,10 +655,10 @@ textarea.form-control {
 }
 
 .box.hover:hover .box-body, .box.hover:focus .box-body {
-  background: #11cbd7;
+  background: #d79211;
   color: #fff;
   padding: 30px 20px;
-  border-color: #11cbd7;
+  border-color: #d79211;
 }
 
 .box.hover:hover h2, .box.hover:focus h2 {
@@ -666,7 +671,7 @@ textarea.form-control {
 }
 
 .breadcrumb-custom li a {
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .breadcrumb-custom li a:hover {
@@ -780,7 +785,7 @@ textarea.form-control {
 
 .media-feature .icon {
   font-size: 60px;
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .media-feature h3 {
@@ -795,7 +800,7 @@ textarea.form-control {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   z-index: 2;
-  border-bottom: 10px solid #11cbd7;
+  border-bottom: 10px solid #d79211;
 }
 
 .media-custom {
@@ -867,7 +872,7 @@ textarea.form-control {
   display: block;
   text-align: left;
   text-decoration: none;
-  color: #11cbd7;
+  color: #d79211;
   position: relative;
   -webkit-box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
   box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.2) !important;
@@ -1135,7 +1140,7 @@ blockquote p {
   font-size: 45px;
   margin: 0;
   padding: 0;
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-15 .text {
@@ -1166,7 +1171,7 @@ blockquote p {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #11cbd7;
+  background: #d79211;
   z-index: -1;
 }
 
@@ -1282,7 +1287,7 @@ blockquote p {
 .block-18 .text strong {
   font-size: 40px;
   line-height: 1.5;
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-18 .text span {
@@ -1325,7 +1330,7 @@ blockquote p {
 }
 
 .block-19 .text .heading a:hover {
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-19 .text .meta .number, .block-19 .text .meta .price {
@@ -1333,7 +1338,7 @@ blockquote p {
 }
 
 .block-19 .text .meta .number span {
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-19 .text .meta .price del {
@@ -1341,7 +1346,7 @@ blockquote p {
 }
 
 .block-19 .text .meta .price span {
-  background: #11cbd7;
+  background: #d79211;
   border-radius: 4px;
   display: inline-block;
   padding: 1px 10px;
@@ -1404,7 +1409,7 @@ blockquote p {
 }
 
 .block-21 .text .heading a:hover, .block-21 .text .heading a:active, .block-21 .text .heading a:focus {
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-21 .text .meta > div {
@@ -1442,7 +1447,7 @@ blockquote p {
 }
 
 .block-20 .text .heading a:hover, .block-20 .text .heading a:focus, .block-20 .text .heading a:active {
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-20 .meta > div {
@@ -1495,7 +1500,7 @@ blockquote p {
 }
 
 .block-22 {
-  background: #11cbd7;
+  background: #d79211;
 }
 
 .block-22 .heading {
@@ -1774,8 +1779,8 @@ blockquote p {
 }
 
 .block-24 ul li a:hover, .block-24 ul li a:focus {
-  color: #11cbd7;
-  border-left: 4px solid #11cbd7;
+  color: #d79211;
+  border-left: 4px solid #d79211;
 }
 
 .block-25 {
@@ -1826,11 +1831,11 @@ blockquote p {
 }
 
 .block-25 ul li a .meta {
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-25 ul li a:hover .text .heading {
-  color: #11cbd7;
+  color: #d79211;
 }
 
 .block-26 {
@@ -1865,7 +1870,7 @@ blockquote p {
   padding: 0 10px;
   border-radius: 4px;
   display: inline-block;
-  background: #11cbd7;
+  background: #d79211;
 }
 
 .block-27 ul, .block-27 ul li {
@@ -1890,7 +1895,7 @@ blockquote p {
 }
 
 .block-27 ul li.active a, .block-27 ul li.active span {
-  background: #11cbd7;
+  background: #d79211;
   color: #fff;
   border: 1px solid transparent;
 }
@@ -2019,9 +2024,9 @@ blockquote p {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  background: #11cbd7;
+  background: #d79211;
   color: #fff;
-  border: 1px solid #11cbd7;
+  border: 1px solid #d79211;
 }
 
 .block-8 .accordion-item .heading > a[aria-expanded="false"]:before {

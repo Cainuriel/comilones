@@ -30,6 +30,11 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <a class="navbar-brand absolute" href="index.html">Comilones</a>
+           <!-- logo -->
+           <div >
+                <img src="img/comilones_logo.png" alt="logo comilones" style="height: 50px; margin-bottom: 1em;">
+              </div>
+              
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -84,14 +89,14 @@
     </header>
     <!-- END header -->
 
-    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(img/celler_sa_prensa.jpg);">
+    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(<?=$restaurante['foto'];?>);">
       <div class="container">
         <div class="row align-items-center justify-content-center site-hero-sm-inner">
           <div class="col-md-7 text-center">
   
             <div class="mb-5 element-animate">
               <h1 class="mb-2"><?=$restaurante['name'];?></h1>
-              <p class="bcrumb"><a href="index.html">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span> <a href="courses.html">Course</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Advanced JavaScript Learning</span></p>
+              <p class="bcrumb"><a href="index.php">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span> <a href="res-single.php?id=<?= $value['id'] ?>">Restaurante</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current"><?=$restaurante['name'];?></span></p>
             </div>
             
           </div>
@@ -108,7 +113,7 @@
           <div class="col-md-6 col-lg-8 order-md-2 mb-5">
             <div class="row">
               <div class="col-md-12">
-                <img src="img/celler_sa_prensa.jpg" alt="" class="img-fluid"> 
+                <img src="<?=$restaurante['foto'];?>" alt="" class="img-fluid"> 
               </div>  
             </div>
             
@@ -134,13 +139,11 @@
             <div class="block-29 mb-5">
               <h2 class="heading">Detalles del Restaurante</h2>
               <ul>
-                <li><span class="text-1">Duration</span> <span class="text-2">50 days</span></li>
-                <li><span class="text-1">Lectures</span> <span class="text-2">201</span></li>
-                <li><span class="text-1">Quizzes</span> <span class="text-2">8</span></li>
-                <li><span class="text-1">Course Certificate</span> <span class="text-2">Yes</span></li>
-                <li><span class="text-1">Subject</span> <span class="text-2">Web Development</span></li>
-                <li><span class="text-1">Language</span> <span class="text-2">English</span></li>
-                <li><span class="text-1">Price</span> <span class="text-2">$102.00</span></li>
+                <li><span class="text-1">Valoracion:</span> <span class="text-2"><?=$restaurante['valoracion'];?></span></li>
+                <li><span class="text-1">Telefono:</span> <span class="text-2"><?=$restaurante['telefono'];?></span></li>
+                <li><span class="text-1">Localidad:</span> <span class="text-2"><?=$restaurante['localidad'];?></span></li>
+                <li><span class="text-1">Tipo de cocina:</span> <span class="text-2"><?=$restaurante['tipo_cocina'];?></span></li>
+                <li><span class="text-1">Precios</span> <span class="text-2">€<?=$restaurante['precios'];?> por persona.</span></li>
               </ul>
             </div>
 
@@ -176,20 +179,20 @@
             <div class="flipper">
               <div class="front" style="background-image: url(../img/person_3.jpg);">
                 <div class="box">
-                  <h2>Paco Martinez</h2>
-                  <p>Fan de lo Mallorquin</p>
+                  <h2>Fernando López</h2>
+                  <p>Desarrollador Web y Coach</p>
                 </div>
               </div>
               <div class="back">
                 <!-- back content -->
                 <blockquote>
-                  <p>&ldquo;No hay nada que me ponga más a tope que recibir nada más llegar un pan torrado con un buen alioli casero. El servicio fue extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
+                  <p>&ldquo;Una de las cosas que m'as me gustan es que nada m'as llegar te sirven un pan torrado con un buen alioli casero. El servicio es extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
                     <img src="img/person_3.jpg" alt="">
                   </div>
-                  <div class="name align-self-center">Paco Martinez <span class="position">Fan de lo Mallorquin</span></div>
+                  <div class="name align-self-center">Fernando López <span class="position">Desarrollador Web y Coach</span></div>
                 </div>
               </div>
             </div>
@@ -208,7 +211,7 @@
               <div class="back">
                 <!-- back content -->
                 <blockquote>
-                  <p>&ldquo;No hay nada que me ponga más a tope que recibir nada más llegar un pan torrado con un buen alioli casero. El servicio fue extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
+                  <p>&ldquo;Comida para gordos&rdquo;</p>
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
@@ -233,7 +236,7 @@
               <div class="back">
                 <!-- back content -->
                 <blockquote>
-                  <p>&ldquo;No hay nada que me ponga más a tope que recibir nada más llegar un pan torrado con un buen alioli casero. El servicio fue extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
+                  <p>&ldquo;El servicio fue extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
@@ -256,7 +259,7 @@
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0 pr-md-5">
             <h2 class="heading">¿Quiere registrarse como comilón?</h2>
-            <p>Envíe un email y le enviaremos el enlace de registro a su cuenta</p>
+            <p>Envíe un email y le enviaremos el enlace de registro.</p>
           </div>
           <div class="col-md-6">
             <form action="#" class="subscribe">
