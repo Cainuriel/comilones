@@ -7,7 +7,7 @@ $ok = true; // bandera de impresion de cards
 <html lang="es">
 
 <head>
-  <title>Free Education Template by Colorlib</title>
+  <title>Comilones</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -43,7 +43,7 @@ $ok = true; // bandera de impresion de cards
               <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+              <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comilones</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 <a class="dropdown-item" href="courses.html">HTML</a>
                 <a class="dropdown-item" href="courses.html">WordPress</a>
@@ -73,7 +73,7 @@ $ok = true; // bandera de impresion de cards
           </ul>
           <ul class="navbar-nav absolute-right">
             <li>
-              <a href="login.html">Login</a> / <a href="register.html">Register</a>
+              <a href="login.html">Empresas</a> / <a href="register.html">Registro</a>
             </li>
           </ul>
 
@@ -83,7 +83,7 @@ $ok = true; // bandera de impresion de cards
   </header>
   <!-- END header -->
 
-  <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(img/big_image_2.jpg);">
+  <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(img/big_image_2.jpg);" alt="Imagen principal del sitio">
     <div class="container">
       <div class="row align-items-center justify-content-center site-hero-inner">
         <div class="col-md-10">
@@ -220,7 +220,7 @@ $ok = true; // bandera de impresion de cards
                   <img class="img-fluid" src="<?= $value['foto'] ?>" alt="Foto de <?= $value['name'] ?>">
                 </figure>
                 <div class="text">
-                  <h2 class="heading"><a href="#"><?= $value['name'] ?></a></h2>
+                  <h2 class="heading"><a href="res-single.php?id=<?=$value['id']?>"><?= $value['name'] ?></a></h2>
                   <p class="mb-4">Localidad: <?= $value['localidad'] ?>.</p>
                   <p>Tipo de cocina: <?= $value['tipo_cocina'] ?>.</p>
                   <div class="meta d-flex align-items-center">

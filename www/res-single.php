@@ -1,7 +1,12 @@
+<?php require_once "controllers/res_single_controller.php";
+
+
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <title>Free Education Template by Colorlib</title>
+    <title>Comilones</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -24,7 +29,7 @@
      
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand absolute" href="index.html">University</a>
+          <a class="navbar-brand absolute" href="index.html">Comilones</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -69,7 +74,7 @@
             </ul>
             <ul class="navbar-nav absolute-right">
               <li>
-                <a href="login.html">Login</a> / <a href="register.html">Register</a>
+                <a href="login.html">Empresas</a> / <a href="register.html">Registro</a>
               </li>
             </ul>
             
@@ -79,13 +84,13 @@
     </header>
     <!-- END header -->
 
-    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/celler_sa_prensa.jpg);">
+    <section class="site-hero site-sm-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(img/celler_sa_prensa.jpg);">
       <div class="container">
         <div class="row align-items-center justify-content-center site-hero-sm-inner">
           <div class="col-md-7 text-center">
   
             <div class="mb-5 element-animate">
-              <h1 class="mb-2">Advanced JavaScript Learning</h1>
+              <h1 class="mb-2"><?=$restaurante['name'];?></h1>
               <p class="bcrumb"><a href="index.html">Home</a> <span class="sep ion-android-arrow-dropright px-2"></span> <a href="courses.html">Course</a> <span class="sep ion-android-arrow-dropright px-2"></span>  <span class="current">Advanced JavaScript Learning</span></p>
             </div>
             
@@ -103,7 +108,7 @@
           <div class="col-md-6 col-lg-8 order-md-2 mb-5">
             <div class="row">
               <div class="col-md-12">
-                <img src="images/celler_sa_prensa.jpg" alt="" class="img-fluid"> 
+                <img src="img/celler_sa_prensa.jpg" alt="" class="img-fluid"> 
               </div>  
             </div>
             
@@ -141,9 +146,9 @@
 
             <div class="block-28 text-center mb-5">
               <figure>
-                <img src="images/person_3.jpg" alt="" class="img-fluid">
+                <img src="img/antonio_mayol.jpg" alt="" class="img-fluid">
               </figure>
-              <h2 class="heading">Tomeu Quetgles</h2>
+              <h2 class="heading">Antonio Mayol</h2>
               <h3 class="subheading">Propietario</h3>
               <p>
                 <a href="#" class="fa fa-twitter p-2"></a>
@@ -169,7 +174,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="block-2">
             <div class="flipper">
-              <div class="front" style="background-image: url(../images/person_3.jpg);">
+              <div class="front" style="background-image: url(../img/person_3.jpg);">
                 <div class="box">
                   <h2>Paco Martinez</h2>
                   <p>Fan de lo Mallorquin</p>
@@ -182,7 +187,7 @@
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="images/person_3.jpg" alt="">
+                    <img src="img/person_3.jpg" alt="">
                   </div>
                   <div class="name align-self-center">Paco Martinez <span class="position">Fan de lo Mallorquin</span></div>
                 </div>
@@ -194,7 +199,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="block-2 ">
             <div class="flipper">
-              <div class="front" style="background-image: url(../images/person_1.jpg);">
+              <div class="front" style="background-image: url(../img/person_1.jpg);">
                 <div class="box">
                   <h2>Marta Ferrer</h2>
                   <p>Frit y trampó a muerte</p>
@@ -207,7 +212,7 @@
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="images/person_1.jpg" alt="">
+                    <img src="img/person_1.jpg" alt="">
                   </div>
                   <div class="name align-self-center">Marta Ferrer <span class="position">Frit y trampó a muerte</span></div>
                 </div>
@@ -219,7 +224,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="block-2">
             <div class="flipper">
-              <div class="front" style="background-image: url(../images/person_2.jpg);">
+              <div class="front" style="background-image: url(../img/person_2.jpg);">
                 <div class="box">
                   <h2>Enrique Quejada</h2>
                   <p>Crítico Culinario</p>
@@ -232,7 +237,7 @@
                 </blockquote>
                 <div class="author d-flex">
                   <div class="image mr-3 align-self-center">
-                    <img src="images/person_2.jpg" alt="">
+                    <img src="img/person_2.jpg" alt="">
                   </div>
                   <div class="name align-self-center">Enrique Quejada <span class="position">Crítico Culinario</span></div>
                 </div>
