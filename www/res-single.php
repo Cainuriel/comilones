@@ -350,7 +350,7 @@
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
                   document.write(new Date().getFullYear());
-                </script> Diseñado y <i class="fa fa-keyboard" aria-hidden="true"></i> por <strong>Fernando López López</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                </script> Diseñado y <i class="fa fa-keyboard" aria-hidden="true"></i> por <strong>Superloper Developer</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
               <p class="float-md-right">
