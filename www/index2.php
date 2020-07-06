@@ -46,35 +46,15 @@ $ok = true; // bandera de impresion de cards
             <li class="nav-item">
               <a class="nav-link active" href="index.html">Home</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comilones</a>
-            
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-
-                <a class="dropdown-item" href="courses.html">HTML</a>
-                <a class="dropdown-item" href="courses.html">WordPress</a>
-                <a class="dropdown-item" href="courses.html">Laravel</a>
-                <a class="dropdown-item" href="courses.html">JavaScript</a>
-                <a class="dropdown-item" href="courses.html">Python</a>
-              </div>
-
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown05">
-                <a class="dropdown-item" href="#">HTML</a>
-                <a class="dropdown-item" href="#">WordPress</a>
-                <a class="dropdown-item" href="#">Laravel</a>
-                <a class="dropdown-item" href="#">JavaScript</a>
-                <a class="dropdown-item" href="#">Python</a>
-              </div>
 
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="blog.html">Blog Culinario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="about.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
             </li>
           </ul>
           <ul class="navbar-nav absolute-right">
@@ -97,30 +77,46 @@ $ok = true; // bandera de impresion de cards
           <div class="mb-5 element-animate">
             <div class="block-17">
               <h2 class="heading text-center mb-4">¿Dónde te gustaría comer?</h2>
-              <form action="" method="post" class="d-block d-lg-flex mb-4">
+              <form action="" method="" class="d-block d-lg-flex mb-4">
                 <div class="fields d-block d-lg-flex">
-                  <div class="textfield-search one-third"><input type="text" class="form-control" placeholder="Keyword search..."></div>
+                  <div class="textfield-search one-third"><input type="text" name="name" class="form-control" placeholder="Nombre"></div>
+
+                  <div class="textfield-search one-third"><input type="text" name="localidad" class="form-control" placeholder="Localidad"></div>
+
+
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control">
-                      <option value="">Category Course</option>
-                      <option value="">Laravel</option>
-                      <option value="">PHP</option>
-                      <option value="">JavaScript</option>
-                      <option value="">Python</option>
+                    <select name="precio" id="" class="form-control">
+                      <option value="">Coste</option>
+                      <option value="">Hasta 20 Euros</option>
+                      <option value="">Entre 30 y 50 Euros</option>
+                      <option value="">Más de 100 Euros</option>
                     </select>
                   </div>
+
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control">
-                      <option value="">Difficulty</option>
-                      <option value="">Beginner</option>
-                      <option value="">Intermediate</option>
-                      <option value="">Advance</option>
+                    <select name="precio" id="" class="form-control">
+                      <option value="">Cocina</option>
+                      <option value="">Mallorquina</option>
+                      <option value="">Italiana</option>
+                      <option value="">Alta Cocina</option>
+                    </select>
+                  </div>
+
+                  <div class="select-wrap one-third">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="valoracion" id="" class="form-control">
+                      <option value="">Valoracion</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                      <option value="">5</option>
                     </select>
                   </div>
                 </div>
-                <input type="submit" class="search-submit btn btn-primary" value="Search">
+                <input type="submit" class="search-submit btn btn-primary" value="Buscar">
               </form>
               <p class="text-center mb-5">Más de quinientos restaurantes de Mallorca a tu disposicion</p>
 
@@ -264,35 +260,30 @@ $ok = true; // bandera de impresion de cards
         <div class="container">
           <div class="row mb-5">
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-              <h3>University</h3>
-              <p>Perferendis eum illum voluptatibus dolore tempora consequatur minus asperiores temporibus.</p>
+              <h3>Comilones</h3>
+              <p>Comilones no se hacen responsable de lo que opinen los comilones. Sobretodo si escriben con la boca llena</p>
             </div>
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-              <h3 class="heading">Quick Link</h3>
+              <h3 class="heading">Menu rápido</h3>
               <div class="row">
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Blog de cocina</a></li>
+                    <li><a href="#">Contacto</a></li>
                   </ul>
                 </div>
                 <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Privacy</a></li>
-                  </ul>
+           
                 </div>
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-              <h3 class="heading">Blog</h3>
+              <h3 class="heading">Blog de cocina</h3>
               <div class="block-21 d-flex mb-4">
                 <div class="text">
-                  <h3 class="heading mb-0"><a href="#">Consectetur Adipisicing Elit</a></h3>
+                  <h3 class="heading mb-0"><a href="#">Comida sana rápida</a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
                     <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
@@ -302,7 +293,7 @@ $ok = true; // bandera de impresion de cards
               </div>
               <div class="block-21 d-flex mb-4">
                 <div class="text">
-                  <h3 class="heading mb-0"><a href="#">Dolore Tempora Consequatur</a></h3>
+                  <h3 class="heading mb-0"><a href="#">Recetas Post-covid</a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
                     <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
@@ -312,7 +303,7 @@ $ok = true; // bandera de impresion de cards
               </div>
               <div class="block-21 d-flex mb-4">
                 <div class="text">
-                  <h3 class="heading mb-0"><a href="#">Perferendis eum illum</a></h3>
+                  <h3 class="heading mb-0"><a href="#">Cocina Mallorquina: La Sopa de Nadal</a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
                     <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
@@ -322,13 +313,13 @@ $ok = true; // bandera de impresion de cards
               </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
-              <h3 class="heading">Contact Information</h3>
+              <h3 class="heading">Otras vias de contacto</h3>
               <div class="block-23">
                 <ul>
-                  <li><span class="icon ion-android-pin"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                  <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+2 392 3929 210</span></a></li>
-                  <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">info@yourdomain.com</span></a></li>
-                  <li><span class="icon ion-android-time"></span><span class="text">Monday &mdash; Friday 8:00am - 5:00pm</span></li>
+                  <li><span class="icon ion-android-pin"></span><span class="text">Calle Manacor nº 43 1º B, Palma de Mallorca, Islas Baleares, España</span></li>
+                  <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+34 622 646 626</span></a></li>
+                  <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">flopez@cifpfbmoll.eu</span></a></li>
+                
                 </ul>
               </div>
             </div>
@@ -340,7 +331,7 @@ $ok = true; // bandera de impresion de cards
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
                   document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                </script> Diseñado y programado  por <strong>Fernando López López</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
               <p class="float-md-right">
