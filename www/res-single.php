@@ -54,7 +54,7 @@
         <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link active" href="index.php">Home</a>
             </li>
 
             <li class="nav-item">
@@ -287,7 +287,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <ul class="list-unstyled">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#">Sobre Nosotros</a></li>
                     <li><a href="#">Blog de cocina</a></li>
                     <li><a href="#">Contacto</a></li>

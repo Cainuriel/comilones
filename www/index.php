@@ -3,253 +3,380 @@
 $ok = true; // bandera de impresion de cards
 ?>
 
-
-
-
 <!doctype html>
 <html lang="es">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Comilones</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/index_styles.css">
-    <!-- <link rel="stylesheet" href="styles\index_responsive.css"> -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
 
-    <title>Comilones</title>
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <div class="container mb-3">
+  <header role="banner">
 
-        <!-- Menu navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand absolute" href="index.php">Comilones</a>
+        <!-- logo -->
+        <div>
+          <img src="img/comilones_logo.png" alt="logo comilones" style="height: 50px; margin-bottom: 1em;">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <header class="header_content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="logo">
-                    <img src="img/comilones_logo.png" alt="">
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.php">Home</a>
+            </li>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item main_nav_item active">
-                            <a class="nav-link " href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item main_nav_item">
-                            <a class="nav-link" href="#">Guia</a>
-                        </li>
-
-                        <li class="nav-item main_nav_item">
-                            <a class="nav-link" href="#">Formulario</a>
-                        </li>
-
-                        <li class="nav-item main_nav_item">
-                            <a class="nav-link" href="#">Quienes somos</a>
-                        </li>
-
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
-
-        </header>
-
-        <!-- fin  Menu navegacion -->
-    </div>
-
-    <div class="container my-5">
-
-        <!-- Formulario filtrado -->
-
-        <section class="header_content">
-            <form>
-                <div class="row form-group">
-                    <div class="col-3 form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId2" placeholder="">
-                        <small id="helpId2" class="form-text text-muted">Busqueda por nombre</small>
-                    </div>
-
-                    <div class="col-3 form-group">
-                        <label for="localidad">Localidad:</label>
-                        <input type="text" class="form-control" name="localidad" id="localidad" aria-describedby="helpId" placeholder="">
-                        <small id="helpId" class="form-text text-muted">Solo islas Baleares</small>
-                    </div>
-
-                    <label class="my-1 mx-2" for="precios">Precio medio por persona:</label>
-                    <select class=" col-3 form-control" name="precios" id="precios">
-                        <option>Indiferente</option>
-                        <option>Hasta 20 euros</option>
-                        <option>Entre 20 y 50 euros</option>
-                        <option>Más de 50 euros</option>
-                    </select>
-
-
-                    <label class="my-1 mx-5" for="valoracion">Valoración: </label>
-                    <select class="col-3 form-control" name="valoracion" id="valoracion">
-                        <option>Indiferente</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-
-                    <label class="my-1 mx-5" for="tipo_cocina">Tipo de cocina</label>
-                    <select class="col-3 form-control" name="tipo_cocina" id="tipo_cocina">
-                        <option>Indiferente</option>
-                        <option>Mallorquina</option>
-                        <option>Francesa</option>
-                        <option>Italiana</option>
-                        <option>Argentina</option>
-                        <option>Casera</option>
-                    </select>
-
-
-
-                    <div class="col-3 form-group">
-                        <button name="submit" type="submit" class="btn btn-primary">Buscar</button>
-                    </div>
-
-                </div>
-            </form>
-        </section>
-    </div>
-
-    <main class="container my-5">
-
-        <!-- Tarjetas restaurantes -->
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-   
-            <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) {
-
-                // isprecio activated?
-                if (isset($_GET['precios']) && ($_GET['precios'] != "Indiferente")) {
-
-                    if ($_GET['precios'] == "Más de 50 euros") {
-
-                        if (intval($value['precios']) > 50) {
-                            $ok = true;
-                        } else {
-                            echo $value['precios'] . " ";
-                            $value['tipo_cocina'] = 'anulado';
-                            $value['valoracion'] = 'anulado';
-                            $ok = false;
-                        }
-                    } elseif ($_GET['precios'] == "Hasta 20 euros") {
-
-                        if (intval($value['precios']) <= 20) {
-                            $ok = true;
-                        } else {
-                            echo $value['precios'] . " ";
-                            $value['tipo_cocina'] = 'anulado';
-                            $value['valoracion'] = 'anulado';
-                            $ok = false;
-                        }
-                    } elseif ($_GET['precios'] == "Entre 20 y 50 euros") {
-
-                        if (intval($value['precios']) > 20 && intval($value['precios']) <= 50) {
-                            $ok = true;
-                        } else {
-                            echo $value['precios'] . " ";
-                            $value['tipo_cocina'] = 'anulado';
-                            $value['valoracion'] = 'anulado';
-                            $ok = false;
-                        }
-                    }
-                }
-
-                // isvaloracion activated?
-                if (isset($_GET['valoracion']) && ($_GET['valoracion'] != "Indiferente")) {
-
-                    if ((intval($value['valoracion'])) == (intval($_GET['valoracion']))) {
-                        $ok = true;
-                    } else {
-
-
-                        $value['tipo_cocina'] = 'anulado';
-
-                        $ok = false;
-                    }
-                }
-
-                // is_cocina activated?
-                if (isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Indiferente")) {
-
-                    if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
-                        $ok = true;
-                    } else {
-                        $ok = false;
-                    }
-                }
-            
-
-            if ($ok) {
-            ?>
-
-                <div class="col mb-4 header_content">
-                    <div class="card h-100">
-                        <img src="<?= $value['foto']?>" class="card-img-top" alt="Foto de <?= $value['name'] ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $value['name'] ?></h5>
-                            <p class="card-text">Localidad: <?= $value['localidad'] ?>.</p>
-                            <p class="card-text">Coste por persona: <?= $value['precios'] ?>.</p>
-                            <p class="card-text">Tipo de cocina: <?= $value['tipo_cocina'] ?>.</p>
-                            <p class="card-text">Valoración: <?= $value['valoracion'] ?>.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            <?php  } } // fin del bucle.
-            // Close and free result
-            $result->close();
-
-            mysqli_close($conn);  ?>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog Culinario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav absolute-right">
+            <li>
+              <a href="login.html">Empresas</a> / <a href="register.html">Registro</a>
+            </li>
+          </ul>
 
         </div>
+      </div>
+    </nav>
+  </header>
+  <!-- END header -->
 
-        <!--  fin Tarjetas restaurantes -->
-    </main>
-
+  <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(img/big_image_2.jpg);" alt="Imagen principal del sitio">
     <div class="container">
+      <div class="row align-items-center justify-content-center site-hero-inner">
+        <div class="col-md-10">
 
-        <div class="row">
+          <div class="mb-5 element-animate">
+            <div class="block-17">
+              <h2 class="heading text-center mb-4">¿Dónde te gustaría comer?</h2>
 
-            <!-- Footer page-footer font-small blue footer -->
-            <footer class="col">
+              <!-- buscador -->
 
-                <!-- Copyright -->
-                <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a href="https://github.com/Cainuriel"> Superloper Developer</a>
+              <form class="d-block d-lg-flex mb-4">
+                <div class="fields d-block d-lg-flex">
+                  <div class="textfield-search one-third">
+
+                    <input type="text" name="name" class="form-control" placeholder="Nombre">
+                  </div>
+
+                  <div class="textfield-search one-third">
+
+                    <input type="text" name="localidad" class="form-control" placeholder="Localidad"></div>
+
+
+                  <div class="select-wrap one-third">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="precios" id="" class="form-control">
+                      <option>Precios</option>
+                      <option>Hasta 20 euros</option>
+                      <option>Entre 20 y 50 euros</option>
+                      <option>Más de 50 euros</option>
+                    </select>
+                  </div>
+
+                  <div class="select-wrap one-third">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="tipo_cocina" id="" class="form-control">
+                      <option>Cocina</option>
+                      <option>Mallorquina</option>
+                      <option>Italiana</option>
+                      <option>Alta Cocina</option>
+                      <option>China</option>
+                    </select>
+                  </div>
+
+                  <div class="select-wrap one-third">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="valoracion" id="" class="form-control">
+                      <option>Estrellas</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
                 </div>
-                <!-- Copyright -->
 
-            </footer>
-            <!-- Footer -->
+                <input type="submit" name="submit" class="search-submit btn btn-primary" value="Buscar">
+              </form>
+
+              <p class="text-center mb-5">Más de quinientos restaurantes de Mallorca a tu disposicion</p>
+
+            </div>
+          </div>
+
         </div>
+      </div>
+    </div>
+  </section>
+  <!-- END section -->
+
+
+
+
+
+  <div class="site-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5 element-animate">
+        <div class="col-md-7 text-center section-heading">
+          <h2 class="text-primary heading">Restaurantes recomendados</h2>
+
+        </div>
+      </div>
     </div>
 
+    <div class="container-fluid block-11 element-animate">
+      <div class="nonloop-block-11 owl-carousel">
+
+        <!-- RESTAURANTS ITEMS -->
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) {
+
+          // isprecio activated?
+          if (isset($_GET['precios']) && ($_GET['precios'] != "Precios")) {
+
+            if ($_GET['precios'] == "Más de 50 euros") {
+
+              if (intval($value['precios']) > 50) {
+                $ok = true;
+              } else {
+                echo $value['precios'] . " ";
+                $value['tipo_cocina'] = 'anulado';
+                $value['valoracion'] = 'anulado';
+                $ok = false;
+              }
+            } elseif ($_GET['precios'] == "Hasta 20 euros") {
+
+              if (intval($value['precios']) <= 20) {
+                $ok = true;
+              } else {
+                echo $value['precios'] . " ";
+                $value['tipo_cocina'] = 'anulado';
+                $value['valoracion'] = 'anulado';
+                $ok = false;
+              }
+            } elseif ($_GET['precios'] == "Entre 20 y 50 euros") {
+
+              if (intval($value['precios']) > 20 && intval($value['precios']) <= 50) {
+                $ok = true;
+              } else {
+                echo $value['precios'] . " ";
+                $value['tipo_cocina'] = 'anulado';
+                $value['valoracion'] = 'anulado';
+                $ok = false;
+              }
+            }
+          }
+
+             // is_cocina activated?
+             if (isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Cocina")) {
+
+              if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
+                $ok = true;
+              } else {
+                $ok = false;
+              }
+            }
+
+          // isvaloracion activated?
+          if (isset($_GET['valoracion']) && ($_GET['valoracion'] != "Estrellas")) {
+
+            if ((intval($value['valoracion'])) == (intval($_GET['valoracion']))) {
+              $ok = true;
+            } else {
+
+
+              $value['tipo_cocina'] = 'anulado';
+
+              $ok = false;
+            }
+          }
+
+       
+        
+
+          if ($ok) {
+        ?>
+            <!-- tarjet Restaurant -->
+            <div class="item">
+              <div class="block-19 ">
+                <figure>
+                  <img class="img-fluid" src="<?= $value['foto'] ?>" alt="Foto de <?= $value['name'] ?>">
+                </figure>
+                <div class="text">
+                  <h2 class="heading"><a href="res-single.php?id=<?= $value['id'] ?>"><?= $value['name'] ?></a></h2>
+                  <p class="mb-4">Localidad: <?= $value['localidad'] ?>.</p>
+                  <p>Tipo de cocina: <?= $value['tipo_cocina'] ?>.</p>
+                  <div class="meta d-flex align-items-center">
+                    <div class="number">
+                      <span> Coste por persona: <?= $value['precios'] ?> </span>
+                    </div>
+                    <div class="price text-right"> Valoracion <span><?= $value['valoracion'] ?></span></div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+        <?php  }
+        } // fin del bucle.
+        // Close and free result
+        $result->close();
+
+        mysqli_close($conn);  ?>
+
+
+
+        <!-- FIN RESTAURANTS ITEMS -->
+
+
+
+
+      </div>
+      <!-- END section -->
+
+
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h3>Comilones</h3>
+              <p>Comilones no se hacen responsable de lo que opinen los comilones. Sobretodo si escriben con la boca llena</p>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h3 class="heading">Menu rápido</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="list-unstyled">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Blog de cocina</a></li>
+                    <li><a href="#">Contacto</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h3 class="heading">Blog de cocina</h3>
+              <div class="block-21 d-flex mb-4">
+                <div class="text">
+                  <h3 class="heading mb-0"><a href="#">Comida sana rápida</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                    <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 d-flex mb-4">
+                <div class="text">
+                  <h3 class="heading mb-0"><a href="#">Recetas Post-covid</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                    <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 d-flex mb-4">
+                <div class="text">
+                  <h3 class="heading mb-0"><a href="#">Cocina Mallorquina: La Sopa de Nadal</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="ion-android-calendar"></span> May 29, 2018</a></div>
+                    <div><a href="#"><span class="ion-android-person"></span> Admin</a></div>
+                    <div><a href="#"><span class="ion-chatbubble"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-5 mb-lg-0">
+              <h3 class="heading">Otras vias de contacto</h3>
+              <div class="block-23">
+                <ul>
+                  <li><span class="icon ion-android-pin"></span><span class="text">Calle Manacor nº 43 1º B, Palma de Mallorca, Islas Baleares, España</span></li>
+                  <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+34 622 646 626</span></a></li>
+                  <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">flopez@cifpfbmoll.eu</span></a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col-md-12 text-center copyright">
+
+              <p class="float-md-left">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>
+                  document.write(new Date().getFullYear());
+                </script> Diseñado y programado por <strong>Superloper Developer</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+              <p class="float-md-right">
+                <a href="#" class="fa fa-facebook p-2"></a>
+                <a href="#" class="fa fa-twitter p-2"></a>
+                <a href="#" class="fa fa-linkedin p-2"></a>
+                <a href="#" class="fa fa-instagram p-2"></a>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END footer -->
+
+      <!-- loader -->
+      <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
+
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/jquery-migrate-3.0.0.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/jquery.animateNumber.min.js"></script>
+
+      <script src="js/jquery.magnific-popup.min.js"></script>
+
+      <script src="js/main.js"></script>
 </body>
 
 </html>
