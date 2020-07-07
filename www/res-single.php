@@ -24,13 +24,13 @@
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/style.css">
 
-   <!-- css y js  mapa -->
+  <!-- css y js  mapa -->
 
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.0.6/dist/css/leaflet.extra-markers.min.css">
-        <link rel="stylesheet" href="css/map.css">
-    
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.0.6/dist/css/leaflet.extra-markers.min.css">
+  <link rel="stylesheet" href="css/map.css">
+
 
 
 </head>
@@ -124,6 +124,9 @@
           </section>
         </div>
         <!-- END content -->
+
+        <!-- Aside -->
+
         <div class="col-md-6 col-lg-4 order-md-1">
 
           <div class="block-29 mb-5">
@@ -133,40 +136,48 @@
               <li><span class="text-1">Telefono:</span> <span class="text-2"><?= $restaurante['telefono']; ?></span></li>
               <li><span class="text-1">Localidad:</span> <span class="text-2"><?= $restaurante['localidad']; ?></span></li>
               <li><span class="text-1">Tipo de cocina:</span> <span class="text-2"><?= $restaurante['tipo_cocina']; ?></span></li>
-              <li><span class="text-1">Precios</span> <span class="text-2">€<?= $restaurante['precios']; ?> por persona.</span></li>
+              <li><span class="text-1">Precios: </span> <span class="text-2"> <strong> €<?= $restaurante['precios']; ?></strong> por persona.</span></li>
             </ul>
           </div>
 
+          <!-- Form reservas -->
           <div class="block-28 text-center mb-5">
             <figure>
-              <img src="img/antonio_mayol.jpg" alt="" class="img-fluid">
+              <img src="img/reserva.png" alt="reserve su mesa" class="img-fluid">
             </figure>
-            <h2 class="heading">Antonio Mayol</h2>
-            <h3 class="subheading">Propietario</h3>
-            <p>
-              <a href="#" class="fa fa-twitter p-2"></a>
-              <a href="#" class="fa fa-facebook p-2"></a>
-              <a href="#" class="fa fa-linkedin p-2"></a>
-            </p>
-            <p>Benvinguts a nuestro Celler. Esperemos que la experiencia sea tan satisfactoria como lo es para nosotros servirle</p>
+            <a href="tel:+34678567876"><button type="button" class="btn btn-primary btn-lg">Llama ahora</button></a>
+            <h2 class="subheading my-4">Horario cenas: 2030h - 2300h.
+            </h2>
+            <h2 class="subheading">Horario comidas: 1300h - 1600h</h2>
+            <form>
 
+              <div class="form-group">
+                <label for="formGroupExampleInput">Nombre</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Introduzca su nombre">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">correo electrónico</label>
+                <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="su correo electrónico">
+              </div>
 
-
+              <button name="reserva" type="submit" class="btn btn-danger">Reservar</button>
+            </form>
+            <p>Reservas por correo <strong> de más de 24 horas</strong>. Debe de recibir confirmación por parte del restaurante</p>
           </div>
         </div>
       </div>
 
-       <!-- mapa container -->
+      <!-- mapa container -->
 
-    <div class="container">
+      <div class="container">
 
-<div class="row">
-<div id="map"></div>    
-</div>
-    </div>
+        <div class="row">
+          <div id="map"></div>
+        </div>
+      </div>
 
 
-    <!-- AQUI ACABA EL MAPA -->
+      <!-- AQUI ACABA EL MAPA -->
 
       <div class="container site-section element-animate">
         <div class="row justify-content-center mb-5">
@@ -188,7 +199,7 @@
                 <div class="back">
                   <!-- back content -->
                   <blockquote>
-                    <p>&ldquo;Una de las cosas que m'as me gustan es que nada m'as llegar te sirven un pan torrado con un buen alioli casero. El servicio es extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
+                    <p>&ldquo;Nada más llegar te sirven un pan torrado con un buen alioli casero. ¡Ya me han ganado con solo eso! El servicio es extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
                   </blockquote>
                   <div class="author d-flex">
                     <div class="image mr-3 align-self-center">
@@ -238,7 +249,7 @@
                 <div class="back">
                   <!-- back content -->
                   <blockquote>
-                    <p>&ldquo;El servicio fue extraordinario de principio a fin. Volveré sin duda. Los precios asequibles y la calidad extraordinaria&rdquo;</p>
+                    <p>&ldquo;Me recuerda a la comida de mi abuela, y yo a ella no le pagué nunca nada. Muy mal lugar para aparcar mi BMW. Deberían descontarte el parking con el precio&rdquo;</p>
                   </blockquote>
                   <div class="author d-flex">
                     <div class="image mr-3 align-self-center">
@@ -294,7 +305,7 @@
                   </ul>
                 </div>
                 <div class="col-md-6">
-           
+
                 </div>
               </div>
             </div>
@@ -338,7 +349,7 @@
                   <li><span class="icon ion-android-pin"></span><span class="text">Calle Manacor nº 43 1º B, Palma de Mallorca, Islas Baleares, España</span></li>
                   <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+34 622 646 626</span></a></li>
                   <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">flopez@cifpfbmoll.eu</span></a></li>
-                
+
                 </ul>
               </div>
             </div>
@@ -371,53 +382,56 @@
           <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
           <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
 
-          
-   <!-- #JS -->
-   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.0.6/src/assets/js/leaflet.extra-markers.min.js"></script>
-        <script>
 
-//Ubicación que mostrará el mapa
-// let map = L.map('map');
-let map = L.map('map').setView([39.56966,2.64235], 10);
+      <!-- #JS -->
+      <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.0.6/src/assets/js/leaflet.extra-markers.min.js"></script>
+      <script>
+        //Ubicación que mostrará el mapa
+        // let map = L.map('map');
+        let map = L.map('map').setView([39.56966, 2.64235], 10);
 
-//añade el mapa de fondo
-L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-maxZoom: 20,
-attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'  
-}).addTo(map)
+        //añade el mapa de fondo
+        L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+          maxZoom: 20,
+          attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map)
 
-//Marcador (chincheta) de ubicación en el mapa
-var marker = L.marker([<?= $restaurante['latitud']; ?>,<?= $restaurante['longitud']; ?>]).addTo(map);
+        //Marcador (chincheta) de ubicación en el mapa
+        var marker = L.marker([<?= $restaurante['latitud']; ?>, <?= $restaurante['longitud']; ?>]).addTo(map);
 
-marker.bindPopup('<?= $restaurante['name']; ?>');
+        marker.bindPopup('<?= $restaurante['name']; ?>');
 
-//Creamos una clase de icono para agregarsela al marcador
-let casalMarker = L.ExtraMarkers.icon({
-  icon: 'fa-home',
-  markerColor: 'pink',
-  shape: 'square',
-  prefix: 'fa'
-});
+        //Creamos una clase de icono para agregarsela al marcador
+        let casalMarker = L.ExtraMarkers.icon({
+          icon: 'fa-home',
+          markerColor: 'pink',
+          shape: 'square',
+          prefix: 'fa'
+        });
 
-//Agregamos el icono al marcador
-marker.setIcon(casalMarker);
+        //Agregamos el icono al marcador
+        marker.setIcon(casalMarker);
 
-// Geolocation
-map.locate({enableHighAccuracy: true}) // creo que activa la geolocalizacion
-map.on('locationfound', (e) => {
-  const coords = [e.latlng.lat, e.latlng.lng];
-  const newMarker = L.marker(coords);
-  newMarker.bindPopup('Estás aqui...');
-  map.addLayer(newMarker);
+        // Geolocation
+        map.locate({
+          enableHighAccuracy: true
+        }) // creo que activa la geolocalizacion
+        map.on('locationfound', (e) => {
+          const coords = [e.latlng.lat, e.latlng.lng];
+          const newMarker = L.marker(coords);
+          newMarker.bindPopup('Estás aqui...');
+          map.addLayer(newMarker);
 
-});
+        });
 
-//Encuadra la posición dada
-map.fitbounds(marker);
+        //Encuadra la posición dada
+        map.fitbounds(marker);
 
-        </script>
-        <!-- See http://leaflet-extras.github.io/leaflet-providers/preview/ for more TileLayers -->
+        // See http: //leaflet-extras.github.io/leaflet-providers/preview/ for more TileLayers 
+      </script>
+
+
 
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/jquery-migrate-3.0.0.js"></script>
