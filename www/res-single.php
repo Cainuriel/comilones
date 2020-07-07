@@ -379,7 +379,7 @@
 
 //Ubicación que mostrará el mapa
 // let map = L.map('map');
-let map = L.map('map').setView([39.56966,2.64235], 13);
+let map = L.map('map').setView([39.56966,2.64235], 10);
 
 //añade el mapa de fondo
 L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
