@@ -33,10 +33,10 @@ $ok = true; // bandera de impresion de cards
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand absolute" href="index.html">Comilones</a>
-            <!-- logo -->
-            <div >
-                <img src="img/comilones_logo.png" alt="logo comilones" style="height: 50px; margin-bottom: 1em;">
-              </div>
+        <!-- logo -->
+        <div>
+          <img src="img/comilones_logo.png" alt="logo comilones" style="height: 50px; margin-bottom: 1em;">
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,47 +77,58 @@ $ok = true; // bandera de impresion de cards
           <div class="mb-5 element-animate">
             <div class="block-17">
               <h2 class="heading text-center mb-4">¿Dónde te gustaría comer?</h2>
-              <form action="" method="" class="d-block d-lg-flex mb-4">
-                <div class="fields d-block d-lg-flex">
-                  <div class="textfield-search one-third"><input type="text" name="name" class="form-control" placeholder="Nombre"></div>
 
-                  <div class="textfield-search one-third"><input type="text" name="localidad" class="form-control" placeholder="Localidad"></div>
+              <!-- buscador -->
+
+              <form class="d-block d-lg-flex mb-4">
+                <div class="fields d-block d-lg-flex">
+                  <div class="textfield-search one-third">
+
+                    <input type="text" name="name" class="form-control" placeholder="Nombre">
+                  </div>
+
+                  <div class="textfield-search one-third">
+
+                    <input type="text" name="localidad" class="form-control" placeholder="Localidad"></div>
 
 
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="precio" id="" class="form-control">
-                      <option value="">Coste</option>
-                      <option value="">Hasta 20 Euros</option>
-                      <option value="">Entre 30 y 50 Euros</option>
-                      <option value="">Más de 100 Euros</option>
+                    <select name="precios" id="" class="form-control">
+                      <option>Precios</option>
+                      <option>Hasta 20 euros</option>
+                      <option>Entre 20 y 50 euros</option>
+                      <option>Más de 50 euros</option>
                     </select>
                   </div>
 
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="precio" id="" class="form-control">
-                      <option value="">Cocina</option>
-                      <option value="">Mallorquina</option>
-                      <option value="">Italiana</option>
-                      <option value="">Alta Cocina</option>
+                    <select name="tipo_cocina" id="" class="form-control">
+                      <option>Cocina</option>
+                      <option>Mallorquina</option>
+                      <option>Italiana</option>
+                      <option>Alta Cocina</option>
+                      <option>China</option>
                     </select>
                   </div>
 
                   <div class="select-wrap one-third">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                     <select name="valoracion" id="" class="form-control">
-                      <option value="">Valoracion</option>
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4</option>
-                      <option value="">5</option>
+                      <option>Estrellas</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
                     </select>
                   </div>
                 </div>
-                <input type="submit" class="search-submit btn btn-primary" value="Buscar">
+
+                <input type="submit" name="submit" class="search-submit btn btn-primary" value="Buscar">
               </form>
+
               <p class="text-center mb-5">Más de quinientos restaurantes de Mallorca a tu disposicion</p>
 
             </div>
@@ -153,7 +164,7 @@ $ok = true; // bandera de impresion de cards
         <?php while ($value = $result->fetch_array(MYSQLI_ASSOC)) {
 
           // isprecio activated?
-          if (isset($_GET['precios']) && ($_GET['precios'] != "Indiferente")) {
+          if (isset($_GET['precios']) && ($_GET['precios'] != "Precios")) {
 
             if ($_GET['precios'] == "Más de 50 euros") {
 
@@ -188,8 +199,18 @@ $ok = true; // bandera de impresion de cards
             }
           }
 
+             // is_cocina activated?
+             if (isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Cocina")) {
+
+              if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
+                $ok = true;
+              } else {
+                $ok = false;
+              }
+            }
+
           // isvaloracion activated?
-          if (isset($_GET['valoracion']) && ($_GET['valoracion'] != "Indiferente")) {
+          if (isset($_GET['valoracion']) && ($_GET['valoracion'] != "Estrellas")) {
 
             if ((intval($value['valoracion'])) == (intval($_GET['valoracion']))) {
               $ok = true;
@@ -202,20 +223,12 @@ $ok = true; // bandera de impresion de cards
             }
           }
 
-          // is_cocina activated?
-          if (isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Indiferente")) {
-
-            if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
-              $ok = true;
-            } else {
-              $ok = false;
-            }
-          }
-
+       
+        
 
           if ($ok) {
         ?>
-                                    <!-- tarjet Restaurant -->
+            <!-- tarjet Restaurant -->
             <div class="item">
               <div class="block-19 ">
                 <figure>
@@ -275,7 +288,7 @@ $ok = true; // bandera de impresion de cards
                   </ul>
                 </div>
                 <div class="col-md-6">
-           
+
                 </div>
               </div>
             </div>
@@ -319,7 +332,7 @@ $ok = true; // bandera de impresion de cards
                   <li><span class="icon ion-android-pin"></span><span class="text">Calle Manacor nº 43 1º B, Palma de Mallorca, Islas Baleares, España</span></li>
                   <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+34 622 646 626</span></a></li>
                   <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">flopez@cifpfbmoll.eu</span></a></li>
-                
+
                 </ul>
               </div>
             </div>
@@ -331,7 +344,7 @@ $ok = true; // bandera de impresion de cards
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
                   document.write(new Date().getFullYear());
-                </script> Diseñado y programado  por <strong>Superloper Developer</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                </script> Diseñado y programado por <strong>Superloper Developer</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
               <p class="float-md-right">
