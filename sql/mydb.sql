@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db-comilones
--- Tiempo de generación: 03-07-2020 a las 17:44:10
+-- Tiempo de generación: 07-07-2020 a las 09:33:33
 -- Versión del servidor: 8.0.20
 -- Versión de PHP: 7.4.6
 
@@ -35,20 +35,22 @@ CREATE TABLE `restaurantes` (
   `valoracion` int DEFAULT NULL,
   `telefono` int DEFAULT NULL,
   `foto` varchar(200) DEFAULT NULL,
-  `tipo_cocina` varchar(200) NOT NULL
+  `tipo_cocina` varchar(200) NOT NULL,
+  `latitud` float DEFAULT NULL,
+  `longitud` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Volcado de datos para la tabla `restaurantes`
 --
 
-INSERT INTO `restaurantes` (`id`, `name`, `localidad`, `precios`, `valoracion`, `telefono`, `foto`, `tipo_cocina`) VALUES
-(1, 'Can torrat', 'Palma de Mallorca', 35, 2, 666666666, 'img/can_torrat.png', 'Mallorquina'),
-(2, 'Celler de Sa Premsa', 'Palma de Mallorca', 13, 5, 666666666, 'img/celler_sa_prensa.jpg', 'Mallorquina'),
-(3, 'Diablito Porto Pi', 'Palma de Mallorca', 20, 2, 666666666, 'img/diablito_porto_pi.jpg', 'Italiana'),
-(4, 'Es 4 vents', 'Algaida', 35, 3, 666666666, 'img/es-4-vents.jpg', 'Mallorquina'),
-(6, 'Perla Brillante', 'Manacor', 55, 4, 666666666, 'img/perla_brillante.jpg', 'China'),
-(7, 'Pura Louzao', 'Palma de Mallorca', 40, 4, 666666666, 'img/puralouzao.png', 'Alta cocina');
+INSERT INTO `restaurantes` (`id`, `name`, `localidad`, `precios`, `valoracion`, `telefono`, `foto`, `tipo_cocina`, `latitud`, `longitud`) VALUES
+(1, 'Can torrat', 'Palma de Mallorca', 35, 2, 666666666, 'img/can_torrat.png', 'Mallorquina', 39.5231, 2.75269),
+(2, 'Celler de Sa Premsa', 'Palma de Mallorca', 13, 5, 666666666, 'img/celler_sa_prensa.jpg', 'Mallorquina', 39.5766, 2.65169),
+(3, 'Diablito Portitxol', 'Palma de Mallorca', 20, 2, 666666666, 'img/diablito_porto_pi.jpg', 'Italiana', 39.5625, 2.66699),
+(4, 'Es 4 vents', 'Algaida', 35, 3, 666666666, 'img/es-4-vents.jpg', 'Mallorquina', 39.5655, 2.90275),
+(6, 'Perla Brillante', 'Manacor', 55, 4, 666666666, 'img/perla_brillante.jpg', 'China', 39.5667, 3.21492),
+(7, 'Pura Louzao', 'Palma de Mallorca', 40, 4, 666666666, 'img/puralouzao.jpg', 'Alta cocina', 39.5717, 2.64158);
 
 --
 -- Índices para tablas volcadas
