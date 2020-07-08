@@ -129,7 +129,7 @@ $ok = true; // bandera de impresion de cards
                 <input type="submit" name="submit" class="search-submit btn btn-primary" value="Buscar">
               </form>
 
-              <p class="text-center mb-5">Más de quinientos restaurantes de Mallorca a tu disposicion</p>
+              <p class="text-center mb-5">Comiendonos Mallorca</p>
 
             </div>
           </div>
