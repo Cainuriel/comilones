@@ -7,7 +7,7 @@ services:
     restart: always
     volumes: ['./www:/var/www/html']
     ports:
-      - '8080:80'
+      - '80:80'
     links: 
       - db-comilones
   
@@ -20,7 +20,7 @@ services:
       - ./db_data:/var/lib/mysql
       - ./sql:/docker-entrypoint-initdb.d
     ports:
-      - '33060:3306' 
+      - '3306:3306' 
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: comilones
