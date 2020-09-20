@@ -1,12 +1,6 @@
 <?php
 
-$host = 'db-comilones';
-$restaurante = 'user';
-$password =  'password';
-$db = "comilones";
-
-// Connection to DB
-$conn = mysqli_connect($host, $restaurante , $password, $db );
+require_once 'db-connect.php';
 
 // Check connection
 if (!$conn) {

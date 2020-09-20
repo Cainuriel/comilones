@@ -51,15 +51,15 @@ $ok = true; // bandera de impresion de cards
               <a class="nav-link" href="blog.html">Blog Culinario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Sobre nosotros</a>
+              <a class="nav-link" href="contact.html">Quien soy</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contacto</a>
+              <a class="nav-link" href="Documentacion_Comilones.pdf">Detalles del proyecto</a>
             </li>
           </ul>
           <ul class="navbar-nav absolute-right">
             <li>
-              <a href="login.html">Empresas</a> / <a href="register.html">Registro</a>
+              <a href="login.php">Empresas</a> / <a href="login.php?comilon">Críticos</a>
             </li>
           </ul>
 
@@ -76,7 +76,8 @@ $ok = true; // bandera de impresion de cards
 
           <div class="mb-5 element-animate">
             <div class="block-17">
-              <h2 class="heading text-center mb-4">¿Dónde te gustaría comer?</h2>
+              <h2 class="heading text-center mb-4">Esto es un proyecto de prácticas profesionales no laborales del módulo <a href=" https://www.sepe.es/HomeSepe/dam/jcr:e2390b18-e9f5-4a72-97c4-518410671edb/IFCD0210_ficha.pdf.">MP0391 </a>
+              </h2>
 
               <!-- buscador -->
 
@@ -129,7 +130,7 @@ $ok = true; // bandera de impresion de cards
                 <input type="submit" name="submit" class="search-submit btn btn-primary" value="Buscar">
               </form>
 
-              <p class="text-center mb-5">Comiendonos Mallorca</p>
+              <p class="text-center mb-5">Filtra los restaurantes a tu gusto</p>
 
             </div>
           </div>
@@ -199,15 +200,15 @@ $ok = true; // bandera de impresion de cards
             }
           }
 
-             // is_cocina activated?
-             if (isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Cocina")) {
+          // is_cocina activated?
+          if (isset($_GET['tipo_cocina']) && ($_GET['tipo_cocina'] != "Cocina")) {
 
-              if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
-                $ok = true;
-              } else {
-                $ok = false;
-              }
+            if ($value['tipo_cocina'] == $_GET['tipo_cocina']) {
+              $ok = true;
+            } else {
+              $ok = false;
             }
+          }
 
           // isvaloracion activated?
           if (isset($_GET['valoracion']) && ($_GET['valoracion'] != "Estrellas")) {
@@ -223,8 +224,8 @@ $ok = true; // bandera de impresion de cards
             }
           }
 
-       
-        
+
+
 
           if ($ok) {
         ?>
@@ -282,9 +283,9 @@ $ok = true; // bandera de impresion de cards
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Quien soy</a></li>
                     <li><a href="#">Blog de cocina</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li> <a href="Documentacion_Comilones.pdf">Detalles del proyecto</a></li>
                   </ul>
                 </div>
                 <div class="col-md-6">

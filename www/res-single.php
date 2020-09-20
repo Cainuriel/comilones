@@ -61,10 +61,10 @@
               <a class="nav-link" href="blog.html">Blog Culinario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Sobre nosotros</a>
+              <a class="nav-link" href="about.html">Detalles del proyecto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contacto</a>
+              <a class="nav-link" href="contact.html">Quien soy</a>
             </li>
           </ul>
           <ul class="navbar-nav absolute-right">
@@ -112,11 +112,17 @@
               <div class="row mb-5">
                 <div class="col-md-12 pt-5">
                   <h2>Descripción</h2>
-                  <p>Los inicios de El Celler Sa Premsa se remontan a mayo de 1958 cuando Antonio Mayol, banquero de formación, apostó por convertir un antiguo almacén en el centro de Palma de Mallorca en un acogedor restaurante. Sin conocimiento de restauración ni hostelería, decidió crear un espacio donde quien quisiera pudiera disfrutar de la comida mallorquina, sin importar su procedencia, sus gustos o inquietudes.
+                  <p>Mei eu mollis albucius, ex nisl contentiones vix. Duo persius volutpat at, cu iuvaret epicuri mei. Duo posse pertinacia no, ex dolor contentiones mea. Nec omnium utamur dignissim ne. Mundi lucilius salutandi an sea, ne sea aeque iudico comprehensam. Populo delicatissimi ad pri. Ex vitae accusam vivendum pro.
 
-                    El boca oreja durante los primeros años propició el éxito del restaurante e hizo que fueran muchos los mallorquines que hicieran una parada en el Celler Sa Premsa. Una tradición que fue también transmitida a los turistas de la isla logrando que, tanto para locales como para visitantes, degustar una comida en el Celler Sa Premsa se convirtiera en una visita obligada.
+                    Vis id minim dicant sensibus. Pri aliquip conclusionemque ad, ad malis evertitur torquatos his. Has ei solum harum reprimique, id illum saperet tractatos his. Ei omnis soleat antiopam quo. Ad augue inani postulant mel, mel ea qualisque forensibus.
 
-                    Más de medio siglo después, el sueño de Antonio sigue siendo una realidad y el restaurante una parada obligada. De la mano de la tercera generación familiar, El Celler Sa Premsa no ha perdido su esencia: el precio, la calidad y el servicio. La fórmula del éxito del negocio desde sus inicios.</p>
+                    Senserit mediocrem vis ex, et dicunt deleniti gubergren mei. Mel id clita mollis repudiare. Sed ad nostro delicatissimi, postea pertinax est an. Adhuc sensibus percipitur sed te, eirmod tritani debitis nec ea. Cu vis quis gubergren.
+
+                    Has maiorum habemus detraxit at. Timeam fabulas splendide et his. Facilisi aliquando sea ad, vel ne consetetur adversarium. Integre admodum et his, nominavi urbanitas et per, alii reprehendunt et qui. His ei meis legere nostro, eu kasd fabellas definiebas mei, in sea augue iriure.
+
+                    No his munere interesset. At soluta accusam gloriatur eos, ferri commodo sed id, ei tollit legere nec. Eum et iudico graecis, cu zzril instructior per, usu at augue epicurei. Saepe scaevola takimata vix id. Errem dictas posidonium id vis, ne modo affert incorrupte eos.
+
+                    Est ei erat mucius quaeque. Ei his quas phaedrum, efficiantur mediocritatem ne sed, hinc oratio blandit ei sed. Blandit gloriatur eam et. Brute noluisse per et, verear disputando neglegentur at quo. Sea quem legere ei, unum soluta ne duo. Ludus complectitur quo te, ut vide autem homero</p>
                 </div>
               </div>
             </div>
@@ -299,9 +305,9 @@
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Quien soy</a></li>
                     <li><a href="#">Blog de cocina</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Detalles del Proyecto</a></li>
                   </ul>
                 </div>
                 <div class="col-md-6">
@@ -383,9 +389,10 @@
           <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214" /></svg></div>
 
 
-      <!-- #JS -->
+      <!-- #JS del mapa -->
       <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/leaflet-extra-markers@1.0.6/src/assets/js/leaflet.extra-markers.min.js"></script>
+
       <script>
         //Ubicación que mostrará el mapa
         // let map = L.map('map');
