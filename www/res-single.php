@@ -41,7 +41,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand absolute" href="index.html">Comilones</a>
+        <a class="navbar-brand absolute" href="index.php">Comilones</a>
         <!-- logo -->
         <div>
           <img src="img/comilones_logo.png" alt="logo comilones" style="height: 50px; margin-bottom: 1em;">
@@ -58,13 +58,13 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog Culinario</a>
+              <a class="nav-link" href="#">Blog Culinario</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about.html">Detalles del proyecto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Quien soy</a>
+              <a class="nav-link" href="#">Quien soy</a>
             </li>
           </ul>
           <ul class="navbar-nav absolute-right">
@@ -307,7 +307,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Quien soy</a></li>
                     <li><a href="#">Blog de cocina</a></li>
-                    <li><a href="#">Detalles del Proyecto</a></li>
+                    <li><a href="Documentacion_Comilones.pdf">Detalles del Proyecto</a></li>
                   </ul>
                 </div>
                 <div class="col-md-6">
@@ -354,7 +354,7 @@
                 <ul>
                   <li><span class="icon ion-android-pin"></span><span class="text">Calle Manacor nº 43 1º B, Palma de Mallorca, Islas Baleares, España</span></li>
                   <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+34 622 646 626</span></a></li>
-                  <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">flopez@cifpfbmoll.eu</span></a></li>
+                  <li><a href="mailto:cainuriel@gmail.com"><span class="icon ion-android-mail"></span><span class="text">cainuriel@gmail.com</span></a></li>
 
                 </ul>
               </div>
