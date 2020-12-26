@@ -64,12 +64,12 @@
               <a class="nav-link" href="about.html">Detalles del proyecto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Quien soy</a>
+              <a class="nav-link" href="https://cainuriel.github.io/">Quien soy</a>
             </li>
           </ul>
           <ul class="navbar-nav absolute-right">
             <li>
-              <a href="login.html">Empresas</a> / <a href="register.html">Registro</a>
+              <a href="login.php">Empresas</a> / <a href="login.php?comilon">Críticos</a>
             </li>
           </ul>
 
@@ -305,7 +305,7 @@
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Quien soy</a></li>
+                    <li><a href="https://cainuriel.github.io/">Quien soy</a></li>
                     <li><a href="#">Blog de cocina</a></li>
                     <li><a href="Documentacion_Comilones.pdf">Detalles del Proyecto</a></li>
                   </ul>
@@ -367,7 +367,7 @@
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
                   document.write(new Date().getFullYear());
-                </script> Diseñado y <i class="fa fa-keyboard" aria-hidden="true"></i> por <strong>Superloper Developer</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                </script> Diseñado y <i class="fa fa-keyboard" aria-hidden="true"></i> por <a href="https://cainuriel.github.io/"><strong>Superloper Developer</strong></a> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
               <p class="float-md-right">

@@ -51,7 +51,7 @@ $ok = true; // bandera de impresion de cards
               <a class="nav-link" href="blog.html">Blog Culinario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Quien soy</a>
+              <a class="nav-link" href="https://cainuriel.github.io/">Quien soy</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Documentacion_Comilones.pdf">Detalles del proyecto</a>
@@ -283,7 +283,7 @@ $ok = true; // bandera de impresion de cards
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Quien soy</a></li>
+                    <li><a href="https://cainuriel.github.io/">Quien soy</a></li>
                     <li><a href="#">Blog de cocina</a></li>
                     <li> <a href="Documentacion_Comilones.pdf">Detalles del proyecto</a></li>
                   </ul>
@@ -332,7 +332,7 @@ $ok = true; // bandera de impresion de cards
                 <ul>
                   <li><span class="icon ion-android-pin"></span><span class="text">Calle Manacor nº 43 1º B, Palma de Mallorca, Islas Baleares, España</span></li>
                   <li><a href="#"><span class="icon ion-ios-telephone"></span><span class="text">+34 622 646 626</span></a></li>
-                  <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">flopez@cifpfbmoll.eu</span></a></li>
+                  <li><a href="#"><span class="icon ion-android-mail"></span><span class="text">cainuriel@gmail.com</span></a></li>
 
                 </ul>
               </div>
@@ -345,7 +345,7 @@ $ok = true; // bandera de impresion de cards
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;<script>
                   document.write(new Date().getFullYear());
-                </script> Diseñado y programado por <strong>Superloper Developer</strong> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                </script> Diseñado y programado por <a href="https://cainuriel.github.io/"><strong>Superloper Developer</strong></a> | Template original de <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
               <p class="float-md-right">
@@ -374,9 +374,7 @@ $ok = true; // bandera de impresion de cards
       <script src="js/jquery.waypoints.min.js"></script>
       <script src="js/jquery.stellar.min.js"></script>
       <script src="js/jquery.animateNumber.min.js"></script>
-
       <script src="js/jquery.magnific-popup.min.js"></script>
-
       <script src="js/main.js"></script>
 </body>
 

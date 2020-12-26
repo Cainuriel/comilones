@@ -102,7 +102,7 @@ if (isset($_GET['comilon'])) {
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                                <a href="quiensoy.php" class="btn btn-danger">Quien soy </a>
+                                <a href="https://cainuriel.github.io/" class="btn btn-danger">Quien soy </a>
                             </div>
                         </div>
                     </div>
